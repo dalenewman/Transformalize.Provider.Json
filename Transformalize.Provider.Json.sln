@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Provider.Json", "src\Transformalize.Provider.Json\Transformalize.Provider.Json.csproj", "{09508A42-8F76-4AAB-84CA-CCD8653CEB96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Provider.Json.Autofac", "src\Transformalize.Provider.Json.Autofac\Transformalize.Provider.Json.Autofac.csproj", "{5251FE45-E09A-4996-BE2A-67EA98FAFF61}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{85FA0C69-A760-4DA4-BBDA-405440FAFD78}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{A0465D20-7758-413F-A911-585923A61160}"
+	ProjectSection(SolutionItems) = preProject
+		nuget\nuget.bat = nuget\nuget.bat
+		nuget\Transformalize.Provider.Json.Autofac.nuspec = nuget\Transformalize.Provider.Json.Autofac.nuspec
+		nuget\Transformalize.Provider.Json.Autofac.v3.nuspec = nuget\Transformalize.Provider.Json.Autofac.v3.nuspec
+		nuget\Transformalize.Provider.Json.nuspec = nuget\Transformalize.Provider.Json.nuspec
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Provider.Json.Autofac.v3", "src\Transformalize.Provider.Json.Autofac.v3\Transformalize.Provider.Json.Autofac.v3.csproj", "{88900CE6-C904-40FF-ADD4-E60A014EF1AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Integration", "src\Test.Integration\Test.Integration.csproj", "{2E887005-5015-4A5A-91CF-0DADD1E834EE}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Transformalize.Provider.Json.Shared", "src\Transformalize.Provider.Json.Shared\Transformalize.Provider.Json.Shared.shproj", "{0FEE1380-78CA-4EF2-9C59-5E978F586371}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		src\Transformalize.Provider.Json.Shared\Transformalize.Provider.Json.Shared.projitems*{0fee1380-78ca-4ef2-9c59-5e978f586371}*SharedItemsImports = 13
+		src\Transformalize.Provider.Json.Shared\Transformalize.Provider.Json.Shared.projitems*{5251fe45-e09a-4996-be2a-67ea98faff61}*SharedItemsImports = 4
+		src\Transformalize.Provider.Json.Shared\Transformalize.Provider.Json.Shared.projitems*{88900ce6-c904-40ff-add4-e60a014ef1ac}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09508A42-8F76-4AAB-84CA-CCD8653CEB96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09508A42-8F76-4AAB-84CA-CCD8653CEB96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09508A42-8F76-4AAB-84CA-CCD8653CEB96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09508A42-8F76-4AAB-84CA-CCD8653CEB96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5251FE45-E09A-4996-BE2A-67EA98FAFF61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5251FE45-E09A-4996-BE2A-67EA98FAFF61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5251FE45-E09A-4996-BE2A-67EA98FAFF61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5251FE45-E09A-4996-BE2A-67EA98FAFF61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88900CE6-C904-40FF-ADD4-E60A014EF1AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88900CE6-C904-40FF-ADD4-E60A014EF1AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88900CE6-C904-40FF-ADD4-E60A014EF1AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88900CE6-C904-40FF-ADD4-E60A014EF1AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E887005-5015-4A5A-91CF-0DADD1E834EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E887005-5015-4A5A-91CF-0DADD1E834EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E887005-5015-4A5A-91CF-0DADD1E834EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E887005-5015-4A5A-91CF-0DADD1E834EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A0465D20-7758-413F-A911-585923A61160} = {85FA0C69-A760-4DA4-BBDA-405440FAFD78}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {178081F6-A699-4B47-9630-78730739C957}
+	EndGlobalSection
+EndGlobal
