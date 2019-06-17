@@ -26,6 +26,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Integration", "src\Tes
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Transformalize.Provider.Json.Shared", "src\Transformalize.Provider.Json.Shared\Transformalize.Provider.Json.Shared.shproj", "{0FEE1380-78CA-4EF2-9C59-5E978F586371}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Transform.Json", "src\Transformalize.Transform.Json\Transformalize.Transform.Json.csproj", "{B69582CE-1251-4F9E-8AE3-9B4525A77C71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Unit", "src\Test.Unit\Test.Unit.csproj", "{1846FBC0-024E-4AEA-BDC7-8B58D4AADDE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Transform.Json.Autofac", "src\Transformalize.Transform.Json.Autofac\Transformalize.Transform.Json.Autofac.csproj", "{17C8302F-74DE-4C70-98D9-BB4659029022}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		src\Transformalize.Provider.Json.Shared\Transformalize.Provider.Json.Shared.projitems*{0fee1380-78ca-4ef2-9c59-5e978f586371}*SharedItemsImports = 13
@@ -53,6 +59,18 @@ Global
 		{2E887005-5015-4A5A-91CF-0DADD1E834EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E887005-5015-4A5A-91CF-0DADD1E834EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E887005-5015-4A5A-91CF-0DADD1E834EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B69582CE-1251-4F9E-8AE3-9B4525A77C71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B69582CE-1251-4F9E-8AE3-9B4525A77C71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B69582CE-1251-4F9E-8AE3-9B4525A77C71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B69582CE-1251-4F9E-8AE3-9B4525A77C71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1846FBC0-024E-4AEA-BDC7-8B58D4AADDE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1846FBC0-024E-4AEA-BDC7-8B58D4AADDE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1846FBC0-024E-4AEA-BDC7-8B58D4AADDE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1846FBC0-024E-4AEA-BDC7-8B58D4AADDE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17C8302F-74DE-4C70-98D9-BB4659029022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17C8302F-74DE-4C70-98D9-BB4659029022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17C8302F-74DE-4C70-98D9-BB4659029022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17C8302F-74DE-4C70-98D9-BB4659029022}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2E887005-5015-4A5A-91CF-0DADD1E834EE}</ProjectGuid>
+    <ProjectGuid>{1846FBC0-024E-4AEA-BDC7-8B58D4AADDE9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Test.Integration</RootNamespace>
-    <AssemblyName>Test.Integration</AssemblyName>
+    <RootNamespace>Test.Unit</RootNamespace>
+    <AssemblyName>Test.Unit</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -41,9 +41,6 @@
   <ItemGroup>
     <Reference Include="Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Autofac.4.6.2\lib\net45\Autofac.dll</HintPath>
-    </Reference>
-    <Reference Include="Bogus, Version=26.0.1.0, Culture=neutral, PublicKeyToken=fa1bb3f3f218129a, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Bogus.26.0.1\lib\net40\Bogus.dll</HintPath>
     </Reference>
     <Reference Include="Cfg.Net.Environment, Version=0.3.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Cfg-NET.Environment.0.3.4\lib\portable-net45+win8+wpa81+wp8\Cfg.Net.Environment.dll</HintPath>
@@ -80,37 +77,24 @@
       <HintPath>..\..\packages\Transformalize.0.6.9-beta\lib\net462\Transformalize.dll</HintPath>
     </Reference>
     <Reference Include="Transformalize.Container.Autofac, Version=0.6.8.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Transformalize.Container.Autofac.0.6.8-beta\lib\net462\Transformalize.Container.Autofac.dll</HintPath>
-    </Reference>
-    <Reference Include="Transformalize.Provider.Bogus, Version=0.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Transformalize.Provider.Bogus.0.5.0-beta\lib\net462\Transformalize.Provider.Bogus.dll</HintPath>
-    </Reference>
-    <Reference Include="Transformalize.Provider.Bogus.Autofac, Version=0.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Transformalize.Provider.Bogus.Autofac.0.5.0-beta\lib\net462\Transformalize.Provider.Bogus.Autofac.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Transformalize.Container.Autofac\src\Transformalize.Container.Autofac\bin\Debug\Transformalize.Container.Autofac.dll</HintPath>
     </Reference>
     <Reference Include="Transformalize.Provider.Console, Version=0.6.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Transformalize.Provider.Console.0.6.4-beta\lib\net462\Transformalize.Provider.Console.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ReadColors.cs" />
-    <Compile Include="ReadWrite.cs" />
+    <Compile Include="Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="files\nfl-team-colors.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Transformalize.Provider.Json.Autofac\Transformalize.Provider.Json.Autofac.csproj">
-      <Project>{5251fe45-e09a-4996-be2a-67ea98faff61}</Project>
-      <Name>Transformalize.Provider.Json.Autofac</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Transformalize.Provider.Json\Transformalize.Provider.Json.csproj">
-      <Project>{09508a42-8f76-4aab-84ca-ccd8653ceb96}</Project>
-      <Name>Transformalize.Provider.Json</Name>
+    <ProjectReference Include="..\Transformalize.Transform.Json.Autofac\Transformalize.Transform.Json.Autofac.csproj">
+      <Project>{17c8302f-74de-4c70-98d9-bb4659029022}</Project>
+      <Name>Transformalize.Transform.Json.Autofac</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

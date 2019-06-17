@@ -8,13 +8,14 @@ using Transformalize.Contracts;
 using Transformalize.Nulls;
 
 namespace Transformalize.Providers.Json.Autofac {
-   public class JsonBuilder {
+   public class JsonProviderBuilder {
+
       private readonly ContainerBuilder _builder;
       private readonly Process _process;
 
-      public JsonBuilder(Process process, ContainerBuilder builder) {
-         _process = process ?? throw new ArgumentException("JsonBuilder's constructor must be provided with a non-null process.", nameof(process));
-         _builder = builder ?? throw new ArgumentException("JsonBuilder's constructor must be provided with a non-null builder.", nameof(builder));
+      public JsonProviderBuilder(Process process, ContainerBuilder builder) {
+         _process = process ?? throw new ArgumentException("Json Provider Builder's constructor must be provided with a non-null process.", nameof(process));
+         _builder = builder ?? throw new ArgumentException("Json Provider Builder's constructor must be provided with a non-null builder.", nameof(builder));
       }
 
       public void Build() {

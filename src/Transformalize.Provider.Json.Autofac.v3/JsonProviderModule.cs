@@ -20,12 +20,12 @@ using Autofac;
 using Transformalize.Configuration;
 
 namespace Transformalize.Providers.Json.Autofac {
-   public class JsonModule : Module {
+   public class JsonProviderModule : Module {
       private readonly Process _process;
 
-      public JsonModule() { }
+      public JsonProviderModule() { }
 
-      public JsonModule(Process process) {
+      public JsonProviderModule(Process process) {
          _process = process;
       }
 
@@ -34,7 +34,7 @@ namespace Transformalize.Providers.Json.Autofac {
          if (_process == null)
             return;
 
-         new JsonBuilder(_process, builder).Build();
+         new JsonProviderBuilder(_process, builder).Build();
 
       }
    }

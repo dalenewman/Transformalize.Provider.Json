@@ -9,6 +9,6 @@
     <Import_RootNamespace>Transformalize.Provider.Json.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)JsonBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)JsonProviderBuilder.cs" />
   </ItemGroup>
 </Project>

@@ -38,7 +38,7 @@ namespace Test.Integration {
          var logger = new ConsoleLogger(LogLevel.Debug);
          using (var outer = new ConfigurationContainer().CreateScope(xml, logger)) {
             var process = outer.Resolve<Process>();
-            using (var inner = new Container(new BogusModule(), new JsonModule()).CreateScope(process, logger)) {
+            using (var inner = new Container(new BogusModule(), new JsonProviderModule()).CreateScope(process, logger)) {
                var controller = inner.Resolve<IProcessController>();
                controller.Execute();
                Assert.AreEqual((uint)1000, process.Entities.First().Inserts);
@@ -68,7 +68,7 @@ namespace Test.Integration {
          var logger = new ConsoleLogger(LogLevel.Debug);
          using (var outer = new ConfigurationContainer().CreateScope(xml, logger)) {
             var process = outer.Resolve<Process>();
-            using (var inner = new Container(new JsonModule()).CreateScope(process, logger)) {
+            using (var inner = new Container(new JsonProviderModule()).CreateScope(process, logger)) {
                var controller = inner.Resolve<IProcessController>();
                controller.Execute();
                var rows = process.Entities.First().Rows;

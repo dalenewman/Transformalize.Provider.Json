@@ -16,17 +16,13 @@
 // limitations under the License.
 #endregion
 
-using System.Linq;
 using Autofac;
 using Transformalize.Configuration;
-using Transformalize.Context;
-using Transformalize.Contracts;
-using Transformalize.Nulls;
 
 namespace Transformalize.Providers.Json.Autofac {
-   public class JsonModule : Module {
+   public class JsonProviderModule : Module {
 
-      public JsonModule() { }
+      public JsonProviderModule() { }
 
       protected override void Load(ContainerBuilder builder) {
 
@@ -36,7 +32,7 @@ namespace Transformalize.Providers.Json.Autofac {
 
          var process = (Process)builder.Properties["Process"];
 
-         new JsonBuilder(process, builder).Build();
+         new JsonProviderBuilder(process, builder).Build();
 
       }
    }
