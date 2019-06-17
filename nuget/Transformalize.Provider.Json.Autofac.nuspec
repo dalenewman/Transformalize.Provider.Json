@@ -3,12 +3,12 @@
   <metadata>
     <id>Transformalize.Provider.Json.Autofac</id>
     <version>0.6.11-beta</version>
-    <title>GeoJsn for Transformalize Autofac Module</title>
+    <title>JSON for Transformalize Autofac Module</title>
     <authors>Dale Newman</authors>
     <owners>Dale Newman</owners>
     <projectUrl>https://github.com/dalenewman/Transformalize</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Json for Transformalize Autofac Module</description>
+    <description>JSON for Transformalize Autofac Module</description>
     <releaseNotes>added reader</releaseNotes>
     <copyright>Copyright 2013-2019</copyright>
     <tags>etl</tags>

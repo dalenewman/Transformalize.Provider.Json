@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{A0465D20
 		nuget\Transformalize.Provider.Json.Autofac.nuspec = nuget\Transformalize.Provider.Json.Autofac.nuspec
 		nuget\Transformalize.Provider.Json.Autofac.v3.nuspec = nuget\Transformalize.Provider.Json.Autofac.v3.nuspec
 		nuget\Transformalize.Provider.Json.nuspec = nuget\Transformalize.Provider.Json.nuspec
+		nuget\Transformalize.Transform.Json.Autofac.nuspec = nuget\Transformalize.Transform.Json.Autofac.nuspec
+		nuget\Transformalize.Transform.Json.nuspec = nuget\Transformalize.Transform.Json.nuspec
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Provider.Json.Autofac.v3", "src\Transformalize.Provider.Json.Autofac.v3\Transformalize.Provider.Json.Autofac.v3.csproj", "{88900CE6-C904-40FF-ADD4-E60A014EF1AC}"

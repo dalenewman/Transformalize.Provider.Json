@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Transformalize.Transform.Json</id>
+    <version>0.6.11-beta</version>
+    <title>JSON based transforms for Transformalize</title>
+    <authors>Dale Newman</authors>
+    <owners>Dale Newman</owners>
+    <projectUrl>https://github.com/dalenewman/Transformalize</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>JSON for Transformalize</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2013-2019</copyright>
+    <tags>etl</tags>
+    <dependencies>
+      <group targetFramework="net462">
+        <dependency id="Transformalize" version="0.6.9-beta" />
+        <dependency id="Newtonsoft.Json" version="11.0.2" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\src\Transformalize.Transform.Json\bin\Release\Transformalize.Transform.Json.dll" target="lib\net462\Transformalize.Transform.Json.dll" />
+  </files>
+</package>
