@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Transformalize.Transform.Json</id>
-    <version>0.6.11-beta</version>
+    <version>0.6.12-beta</version>
     <title>JSON based transforms for Transformalize</title>
     <authors>Dale Newman</authors>
     <owners>Dale Newman</owners>
@@ -14,7 +14,7 @@
     <tags>etl</tags>
     <dependencies>
       <group targetFramework="net462">
-        <dependency id="Transformalize" version="0.6.9-beta" />
+        <dependency id="Transformalize" version="0.6.10-beta" />
         <dependency id="Newtonsoft.Json" version="11.0.2" />
       </group>
     </dependencies>
