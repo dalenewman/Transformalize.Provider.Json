@@ -3,12 +3,16 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>0fee1380-78ca-4ef2-9c59-5e978f586371</SharedGUID>
+    <SharedGUID>0b844803-702a-41c9-823a-aeb895845da1</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>Transformalize.Provider.Json.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)JsonProviderBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileUtility.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)JsonFileReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)JsonFileWriter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)JsonStreamReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)JsonStreamWriter.cs" />
   </ItemGroup>
 </Project>
