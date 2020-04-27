@@ -95,6 +95,10 @@
       <Project>{17c8302f-74de-4c70-98d9-bb4659029022}</Project>
       <Name>Transformalize.Transform.Json.Autofac</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Transformalize.Transform.Json\Transformalize.Transform.Json.csproj">
+      <Project>{b69582ce-1251-4f9e-8ae3-9b4525a77c71}</Project>
+      <Name>Transformalize.Transform.Json</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

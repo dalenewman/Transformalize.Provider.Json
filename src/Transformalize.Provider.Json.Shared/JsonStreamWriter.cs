@@ -44,29 +44,29 @@ namespace Transformalize.Providers.Json {
       public void Write(IEnumerable<IRow> rows) {
 
          var textWriter = new StreamWriter(_stream);
-         var jsonWriter = new JsonTextWriter(textWriter);
+         var jw = new JsonTextWriter(textWriter);
 
-         jsonWriter.WriteStartArray();
+         jw.WriteStartArrayAsync();
 
          foreach (var row in rows) {
 
-            jsonWriter.WriteStartObject();
+            jw.WriteStartObjectAsync();
 
             for (int i = 0; i < _fields.Length; i++) {
-               jsonWriter.WritePropertyName(_fields[i].Alias);
-               if(_formats[i] == string.Empty) {
-                  jsonWriter.WriteValue(row[_fields[i]]);
+               jw.WritePropertyNameAsync(_fields[i].Alias);
+               if (_formats[i] == string.Empty) {
+                  jw.WriteValueAsync(row[_fields[i]]);
                } else {
-                  jsonWriter.WriteValue(string.Format(_formats[i], row[_fields[i]]));
+                  jw.WriteValueAsync(string.Format(_formats[i], row[_fields[i]]));
                }
             }
-            jsonWriter.WriteEndObject();
+            jw.WriteEndObjectAsync();
             _context.Entity.Inserts++;
          }
 
-         jsonWriter.WriteEndArray(); 
+         jw.WriteEndArrayAsync();
 
-         jsonWriter.Flush();
+         jw.FlushAsync();
       }
    }
 }
