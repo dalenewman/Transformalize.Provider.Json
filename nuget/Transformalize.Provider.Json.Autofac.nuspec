@@ -2,11 +2,12 @@
 <package>
    <metadata>
       <id>Transformalize.Provider.Json.Autofac</id>
-      <version>0.6.30-beta</version>
+      <version>0.6.31-beta</version>
       <title>JSON for Transformalize Autofac Module</title>
       <authors>Dale Newman</authors>
       <owners>Dale Newman</owners>
-      <projectUrl>https://github.com/dalenewman/Transformalize</projectUrl>
+      <license type="expression">MIT</license>
+      <projectUrl>https://github.com/dalenewman/Transformalize.Provider.Json</projectUrl>
       <requireLicenseAcceptance>false</requireLicenseAcceptance>
       <description>JSON for Transformalize Autofac Module</description>
       <releaseNotes>added .net standard target</releaseNotes>
@@ -15,17 +16,19 @@
       <dependencies>
          <group targetFramework="net462">
             <dependency id="Transformalize.Container.Autofac" version="0.6.30-beta" />
-            <dependency id="Transformalize.Provider.Json" version="0.6.30-beta" />
+            <dependency id="Transformalize.Provider.Json" version="0.6.31-beta" />
          </group>
          <group targetFramework="netstandard2.0">
             <dependency id="Transformalize.Container.Autofac" version="0.6.30-beta" />
-            <dependency id="Transformalize.Provider.Json" version="0.6.30-beta" />
+            <dependency id="Transformalize.Provider.Json" version="0.6.31-beta" />
          </group>
       </dependencies>
    </metadata>
    <files>
       <file src="..\src\Transformalize.Provider.Json.Autofac\bin\Debug\Transformalize.Provider.Json.Autofac.dll" target="lib\net462\Transformalize.Provider.Json.Autofac.dll" />
+      <file src="..\src\Transformalize.Provider.Json.Autofac\bin\Debug\Transformalize.Provider.Json.Autofac.pdb" target="lib\net462\Transformalize.Provider.Json.Autofac.pdb" />
       <file src="..\src\Transformalize.Provider.Json.Autofac.Standard.20\bin\Debug\netstandard2.0\Transformalize.Provider.Json.Autofac.deps.json" target="lib\netstandard2.0\Transformalize.Provider.Json.Autofac.deps.json" />
       <file src="..\src\Transformalize.Provider.Json.Autofac.Standard.20\bin\Debug\netstandard2.0\Transformalize.Provider.Json.Autofac.dll" target="lib\netstandard2.0\Transformalize.Provider.Json.Autofac.dll" />
+      <file src="..\src\Transformalize.Provider.Json.Autofac.Standard.20\bin\Debug\netstandard2.0\Transformalize.Provider.Json.Autofac.pdb" target="lib\netstandard2.0\Transformalize.Provider.Json.Autofac.pdb" />
    </files>
 </package>

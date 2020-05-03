@@ -2,11 +2,12 @@
 <package>
    <metadata>
       <id>Transformalize.Transform.Json</id>
-      <version>0.6.30-beta</version>
+      <version>0.6.31-beta</version>
       <title>JSON transforms for Transformalize</title>
       <authors>Dale Newman</authors>
       <owners>Dale Newman</owners>
-      <projectUrl>https://github.com/dalenewman/Transformalize</projectUrl>
+      <license type="expression">MIT</license>
+      <projectUrl>https://github.com/dalenewman/Transformalize.Provider.Json</projectUrl>
       <requireLicenseAcceptance>false</requireLicenseAcceptance>
       <description>JSON transforms for Transformalize</description>
       <releaseNotes>added .net standard 2.0 target</releaseNotes>
