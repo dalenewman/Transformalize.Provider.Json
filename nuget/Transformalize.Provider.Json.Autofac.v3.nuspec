@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Transformalize.Provider.Json.Autofac.v3</id>
-    <version>0.6.20-beta</version>
+    <version>0.6.30-beta</version>
     <title>JSON for Transformalize Autofac Module</title>
     <authors>Dale Newman</authors>
     <owners>Dale Newman</owners>
@@ -15,11 +15,11 @@
     <dependencies>
       <group targetFramework="net462">
         <dependency id="Autofac" version="3.5.2" />
-        <dependency id="Transformalize.Provider.Json" version="0.6.20-beta" />
+        <dependency id="Transformalize.Provider.Json" version="0.6.30-beta" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="..\src\Transformalize.Provider.Json.Autofac.v3\bin\Release\Transformalize.Provider.Json.Autofac.v3.dll" target="lib\net462\Transformalize.Provider.Json.Autofac.v3.dll" />
+    <file src="..\src\Transformalize.Provider.Json.Autofac.v3\bin\Debug\Transformalize.Provider.Json.Autofac.v3.dll" target="lib\net462\Transformalize.Provider.Json.Autofac.v3.dll" />
   </files>
 </package>
