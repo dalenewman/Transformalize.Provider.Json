@@ -7,7 +7,8 @@
       <title>JSON for Transformalize Autofac Module</title>
       <authors>Dale Newman</authors>
       <owners>Dale Newman</owners>
-      <projectUrl>https://github.com/dalenewman/Transformalize</projectUrl>
+      <projectUrl>https://github.com/dalenewman/Transformalize.Provider.Json</projectUrl>
+      <license type="expression">Apache-2.0</license>
       <requireLicenseAcceptance>false</requireLicenseAcceptance>
       <description>JSON for Transformalize Autofac Module</description>
       <releaseNotes>added .net standard 2.0 target</releaseNotes>
