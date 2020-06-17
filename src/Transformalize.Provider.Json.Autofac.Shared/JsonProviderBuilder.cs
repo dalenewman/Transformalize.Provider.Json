@@ -27,7 +27,7 @@ namespace Transformalize.Providers.Json.Autofac {
          }
 
          // Json input
-         foreach (var entity in _process.Entities.Where(e => _process.Connections.First(c => c.Name == e.Connection).Provider == "json")) {
+         foreach (var entity in _process.Entities.Where(e => _process.Connections.First(c => c.Name == e.Input).Provider == "json")) {
 
             // input version detector
             _builder.RegisterType<NullInputProvider>().Named<IInputProvider>(entity.Key);
@@ -41,7 +41,7 @@ namespace Transformalize.Providers.Json.Autofac {
 
          }
 
-         if (_process.Output().Provider == "json") {
+         if (_process.GetOutputConnection().Provider == "json") {
 
             foreach (var entity in _process.Entities) {
 

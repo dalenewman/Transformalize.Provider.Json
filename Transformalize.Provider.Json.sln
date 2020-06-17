@@ -14,6 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{A0465D20-7758-413F-A911-585923A61160}"
 	ProjectSection(SolutionItems) = preProject
+		nuget\myget.bat = nuget\myget.bat
 		nuget\nuget.bat = nuget\nuget.bat
 		nuget\Transformalize.Provider.Json.Autofac.nuspec = nuget\Transformalize.Provider.Json.Autofac.nuspec
 		nuget\Transformalize.Provider.Json.Autofac.v3.nuspec = nuget\Transformalize.Provider.Json.Autofac.v3.nuspec
@@ -50,11 +51,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Transform.Autofac", "Transf
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Transformalize.Transform.Json.Shared", "src\Transformalize.Transform.Json.Shared\Transformalize.Transform.Json.Shared.shproj", "{8CA4EE65-1D7B-470A-A2BC-E56930EA319A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Transform.Json.Standard.20", "src\Transformalize.Transform.Json.Standard.20\Transformalize.Transform.Json.Standard.20.csproj", "{731088BA-4A20-4D7F-823C-20DE89811AEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transformalize.Transform.Json.Standard.20", "src\Transformalize.Transform.Json.Standard.20\Transformalize.Transform.Json.Standard.20.csproj", "{731088BA-4A20-4D7F-823C-20DE89811AEC}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Transformalize.Transform.Json.Autofac.Shared", "src\Transformalize.Transform.Json.Autofac.Shared\Transformalize.Transform.Json.Autofac.Shared.shproj", "{645230EF-63AB-4A09-A493-CF3707F944E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Transform.Json.Autofac.Standard.20", "src\Transformalize.Transform.Json.Autofac.Standard.20\Transformalize.Transform.Json.Autofac.Standard.20.csproj", "{F92EEAD8-9AFA-4DCA-A676-EDDE44197663}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transformalize.Transform.Json.Autofac.Standard.20", "src\Transformalize.Transform.Json.Autofac.Standard.20\Transformalize.Transform.Json.Autofac.Standard.20.csproj", "{F92EEAD8-9AFA-4DCA-A676-EDDE44197663}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

@@ -4,12 +4,12 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Transformalize.Providers.Json</RootNamespace>
     <AssemblyName>Transformalize.Provider.Json</AssemblyName>
-    <Version>0.6.29-beta</Version>
+    <Version>0.8.1-beta</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="Transformalize" Version="0.6.29-beta" />
+    <PackageReference Include="Transformalize" Version="0.8.1-beta" />
   </ItemGroup>
 
   <Import Project="..\Transformalize.Provider.Json.Shared\Transformalize.Provider.Json.Shared.projitems" Label="Shared" />

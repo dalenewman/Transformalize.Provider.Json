@@ -49,7 +49,7 @@ namespace Transformalize.Providers.Json {
          var current = 0;
          var start = 0;
          var end = 0;
-         var inArray = false;
+
          if (_context.Entity.IsPageRequest()) {
             start += (_context.Entity.Page * _context.Entity.Size) - _context.Entity.Size;
             end = start + _context.Entity.Size;
