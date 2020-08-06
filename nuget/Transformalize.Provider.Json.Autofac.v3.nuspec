@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Transformalize.Provider.Json.Autofac.v3</id>
-    <version>0.8.22-beta</version>
+    <version>0.8.23-beta</version>
     <title>JSON for Transformalize Autofac Module</title>
     <authors>Dale Newman</authors>
     <owners>Dale Newman</owners>
@@ -10,13 +10,14 @@
     <license type="expression">Apache-2.0</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>JSON for Transformalize Autofac Module</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>
+    </releaseNotes>
     <copyright>Copyright 2013-2020</copyright>
     <tags>etl</tags>
     <dependencies>
       <group targetFramework="net462">
         <dependency id="Autofac" version="3.5.2" />
-        <dependency id="Transformalize.Provider.Json" version="0.8.22-beta" />
+        <dependency id="Transformalize.Provider.Json" version="0.8.23-beta" />
       </group>
     </dependencies>
   </metadata>

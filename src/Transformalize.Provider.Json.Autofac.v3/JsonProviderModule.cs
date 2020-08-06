@@ -17,16 +17,19 @@
 #endregion
 
 using Autofac;
+using System.IO;
 using Transformalize.Configuration;
 
 namespace Transformalize.Providers.Json.Autofac {
    public class JsonProviderModule : Module {
       private readonly Process _process;
+      private readonly Stream _stream;
 
       public JsonProviderModule() { }
 
-      public JsonProviderModule(Process process) {
+      public JsonProviderModule(Process process, Stream stream = null) {
          _process = process;
+         _stream = stream;
       }
 
       protected override void Load(ContainerBuilder builder) {
@@ -34,7 +37,7 @@ namespace Transformalize.Providers.Json.Autofac {
          if (_process == null)
             return;
 
-         new JsonProviderBuilder(_process, builder).Build();
+         new JsonProviderBuilder(_process, builder, _stream).Build();
 
       }
    }

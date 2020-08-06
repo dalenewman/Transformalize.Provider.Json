@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Transformalize.Transform.Json</id>
-    <version>0.8.22-beta</version>
+    <version>0.8.23-beta</version>
     <title>JSON transforms for Transformalize</title>
     <authors>Dale Newman</authors>
     <owners>Dale Newman</owners>
@@ -10,7 +10,8 @@
     <license type="expression">Apache-2.0</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>JSON transforms for Transformalize</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>
+    </releaseNotes>
     <copyright>Copyright 2013-2020</copyright>
     <tags>etl</tags>
     <dependencies>

@@ -3,7 +3,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Transformalize.Transforms.Json.Autofac</RootNamespace>
     <AssemblyName>Transformalize.Transform.Json.Autofac</AssemblyName>
-    <Version>0.8.22-beta</Version>
+    <Version>0.8.23-beta</Version>
   </PropertyGroup>
   <Import Project="..\Transformalize.Transform.Json.Autofac.Shared\Transformalize.Transform.Json.Autofac.Shared.projitems" Label="Shared" />
   <ItemGroup>
