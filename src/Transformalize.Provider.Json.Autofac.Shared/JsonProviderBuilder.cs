@@ -14,6 +14,8 @@ namespace Transformalize.Providers.Json.Autofac {
       private readonly Process _process;
       private readonly Stream _stream;
 
+      public bool UseAsyncMethods { get; set; } = false;
+
       public JsonProviderBuilder(Process process, ContainerBuilder builder, Stream stream = null) {
          _process = process ?? throw new ArgumentException("Json Provider Builder's constructor must be provided with a non-null process.", nameof(process));
          _builder = builder ?? throw new ArgumentException("Json Provider Builder's constructor must be provided with a non-null builder.", nameof(builder));
@@ -49,7 +51,11 @@ namespace Transformalize.Providers.Json.Autofac {
                _builder.Register<IWrite>(ctx => {
                   var output = ctx.ResolveNamed<OutputContext>(entity.Key);
                   if (output.Connection.Stream && _stream != null) {
-                     return new JsonStreamWriter(output, _stream);
+                     if (UseAsyncMethods) {
+                        return new JsonStreamWriter(output, _stream);
+                     } else {
+                        return new JsonStreamWriterSync(output, _stream); // to avoid: The stream is currently in use by a previous operation on the stream
+                     }
                   } else {
                      return new JsonFileWriter(output);
                   }

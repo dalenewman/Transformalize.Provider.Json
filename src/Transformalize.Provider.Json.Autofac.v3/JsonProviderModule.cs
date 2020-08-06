@@ -37,7 +37,9 @@ namespace Transformalize.Providers.Json.Autofac {
          if (_process == null)
             return;
 
-         new JsonProviderBuilder(_process, builder, _stream).Build();
+         var b = new JsonProviderBuilder(_process, builder, _stream) { UseAsyncMethods = false };
+
+         b.Build();        
 
       }
    }
