@@ -24,7 +24,7 @@ namespace Transformalize.Providers.Json.Autofac {
    public class JsonProviderModule : Module {
       private readonly Process _process;
       private readonly Stream _stream;
-
+      public bool UseAsyncMethods { get; set; }
       public JsonProviderModule() { }
 
       public JsonProviderModule(Process process, Stream stream = null) {
@@ -37,7 +37,7 @@ namespace Transformalize.Providers.Json.Autofac {
          if (_process == null)
             return;
 
-         var b = new JsonProviderBuilder(_process, builder, _stream) { UseAsyncMethods = false };
+         var b = new JsonProviderBuilder(_process, builder, _stream) { UseAsyncMethods = UseAsyncMethods };
 
          b.Build();        
 
