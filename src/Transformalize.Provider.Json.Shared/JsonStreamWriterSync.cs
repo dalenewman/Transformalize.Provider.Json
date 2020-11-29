@@ -20,6 +20,7 @@ using System.IO;
 using System.Linq;
 using Newtonsoft.Json;
 using Transformalize.Configuration;
+using Transformalize.Context;
 using Transformalize.Contracts;
 
 namespace Transformalize.Providers.Json {
@@ -29,9 +30,9 @@ namespace Transformalize.Providers.Json {
       private readonly Stream _stream;
       private readonly Field[] _fields;
       private readonly string[] _formats;
-      private readonly IContext _context;
+      private readonly OutputContext _context;
 
-      public JsonStreamWriterSync(IContext context, Stream stream) {
+      public JsonStreamWriterSync(OutputContext context, Stream stream) {
          _context = context;
          _stream = stream;
          _fields = context.GetAllEntityOutputFields().ToArray();
@@ -44,7 +45,9 @@ namespace Transformalize.Providers.Json {
       public void Write(IEnumerable<IRow> rows) {
 
          var textWriter = new StreamWriter(_stream);
-         var jw = new JsonTextWriter(textWriter);
+         var jw = new JsonTextWriter(textWriter) {
+            Formatting = _context.Connection.Format == "json" ? Formatting.Indented : Formatting.None
+         };
 
          jw.WriteStartArray();
 
