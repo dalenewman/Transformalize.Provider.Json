@@ -21,7 +21,7 @@ namespace Test.Integration {
   </parameters>
   <connections>
     <add name='input' provider='bogus' seed='1' />
-    <add name='output' provider='json' file='bogus.json' />
+    <add name='output' provider='json' file='c:\temp\bogus.json' format='json' />
   </connections>
   <entities>
     <add name='Contact' size='@[Size]'>
