@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Transformalize.Transform.Json</id>
-    <version>0.8.30-beta</version>
+    <version>0.8.34-beta</version>
     <title>JSON transforms for Transformalize</title>
     <authors>Dale Newman</authors>
     <owners>Dale Newman</owners>

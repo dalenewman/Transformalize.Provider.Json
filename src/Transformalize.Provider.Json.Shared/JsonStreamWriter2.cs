@@ -126,7 +126,7 @@ namespace Transformalize.Providers.Json {
             jw.WriteEndObject();
             _context.Entity.Inserts++;
 
-            if (_context.Entity.Inserts % _context.Entity.InsertSize == 0) {
+            if (_context.Entity.Inserts % 50 == 0) {
                jw.FlushAsync();
             }
          }

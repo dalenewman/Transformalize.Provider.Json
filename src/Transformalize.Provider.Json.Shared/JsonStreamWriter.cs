@@ -65,6 +65,10 @@ namespace Transformalize.Providers.Json {
             }
             jw.WriteEndObjectAsync();
             _context.Entity.Inserts++;
+
+            if (_context.Entity.Inserts % 50 == 0) {
+               jw.FlushAsync();
+            }
          }
 
          jw.WriteEndArrayAsync();
