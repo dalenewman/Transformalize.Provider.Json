@@ -13,7 +13,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)JsonFileReader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)JsonFileWriter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)JsonStreamReader.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)JsonStreamWriterSync.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)JsonStreamWriter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)JsonStreamWriterSync.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)JsonStreamWriter2.cs" />
   </ItemGroup>
 </Project>

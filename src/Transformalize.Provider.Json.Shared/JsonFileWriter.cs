@@ -30,7 +30,7 @@ namespace Transformalize.Providers.Json {
         public JsonFileWriter(OutputContext context) {
             _context = context;
             _stream = new MemoryStream();
-            _streamWriter = new JsonStreamWriter(context, _stream);
+            _streamWriter = new JsonStreamWriter2(context, _stream);
         }
 
         public void Write(IEnumerable<IRow> rows) {

@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Transformalize.Transform.Json.Autofac</id>
-    <version>0.8.29-beta</version>
+    <version>0.8.30-beta</version>
     <title>JSON for Transformalize Autofac Module</title>
     <authors>Dale Newman</authors>
     <owners>Dale Newman</owners>
@@ -11,16 +11,16 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>JSON for Transformalize Autofac Module</description>
     <releaseNotes>added .net standard 2.0 target</releaseNotes>
-    <copyright>Copyright 2013-2020</copyright>
+    <copyright>Copyright 2013-2021</copyright>
     <tags>etl</tags>
     <dependencies>
       <group targetFramework="net462">
-        <dependency id="Transformalize.Container.Autofac" version="0.8.29-beta" />
-        <dependency id="Transformalize.Transform.Json" version="0.8.29-beta" />
+        <dependency id="Transformalize.Container.Autofac" version="0.8.35-beta" />
+        <dependency id="Transformalize.Transform.Json" version="0.8.30-beta" />
       </group>
       <group targetFramework="netstandard2.0">
-        <dependency id="Transformalize.Container.Autofac" version="0.8.29-beta" />
-        <dependency id="Transformalize.Transform.Json" version="0.8.29-beta" />
+        <dependency id="Transformalize.Container.Autofac" version="0.8.35-beta" />
+        <dependency id="Transformalize.Transform.Json" version="0.8.30-beta" />
       </group>
     </dependencies>
   </metadata>

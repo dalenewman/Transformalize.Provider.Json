@@ -51,8 +51,8 @@ namespace Transformalize.Providers.Json.Autofac {
                _builder.Register<IWrite>(ctx => {
                   var output = ctx.ResolveNamed<OutputContext>(entity.Key);
                   if (output.Connection.Stream && _stream != null) {
-                     if (UseAsyncMethods) {
-                        return new JsonStreamWriter(output, _stream);
+                     if (UseAsyncMethods) {  // orchard core (asp.net core) requires all output stream operations to be async
+                        return new JsonStreamWriter2(output, _stream);
                      } else {
                         return new JsonStreamWriterSync(output, _stream); // to avoid: The stream is currently in use by a previous operation on the stream
                      }
