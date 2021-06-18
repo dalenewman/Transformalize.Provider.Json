@@ -44,36 +44,33 @@ namespace Transformalize.Providers.Json {
 
       public void Write(IEnumerable<IRow> rows) {
 
-         var textWriter = new StreamWriter(_stream);
-         var jw = new JsonTextWriter(textWriter) {
+         var jw = new JsonTextWriter(new StreamWriter(_stream)) {
             Formatting = _context.Connection.Format == "json" ? Formatting.Indented : Formatting.None
          };
 
-         jw.WriteStartArrayAsync();
+         jw.WriteStartArrayAsync().ConfigureAwait(false);
 
          foreach (var row in rows) {
 
-            jw.WriteStartObjectAsync();
+            jw.WriteStartObjectAsync().ConfigureAwait(false);
 
             for (int i = 0; i < _fields.Length; i++) {
-               jw.WritePropertyNameAsync(_fields[i].Alias);
+               jw.WritePropertyNameAsync(_fields[i].Alias).ConfigureAwait(false);
                if (_formats[i] == string.Empty) {
-                  jw.WriteValueAsync(row[_fields[i]]);
+                  jw.WriteValueAsync(row[_fields[i]]).ConfigureAwait(false);
                } else {
-                  jw.WriteValueAsync(string.Format(_formats[i], row[_fields[i]]));
+                  jw.WriteValueAsync(string.Format(_formats[i], row[_fields[i]])).ConfigureAwait(false);
                }
             }
-            jw.WriteEndObjectAsync();
+            jw.WriteEndObjectAsync().ConfigureAwait(false);
             _context.Entity.Inserts++;
 
-            if (_context.Entity.Inserts % 50 == 0) {
-               jw.FlushAsync();
-            }
+            jw.FlushAsync().ConfigureAwait(false);
          }
 
-         jw.WriteEndArrayAsync();
+         jw.WriteEndArrayAsync().ConfigureAwait(false);
 
-         jw.FlushAsync();
+         jw.FlushAsync().ConfigureAwait(false);
       }
    }
 }

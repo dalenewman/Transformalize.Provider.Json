@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Transformalize.Transform.Json</id>
-    <version>0.8.34-beta</version>
+    <version>0.8.38-beta</version>
     <title>JSON transforms for Transformalize</title>
     <authors>Dale Newman</authors>
     <owners>Dale Newman</owners>
@@ -12,7 +12,7 @@
     <description>JSON transforms for Transformalize</description>
     <releaseNotes>
     </releaseNotes>
-    <copyright>Copyright 2013-2020</copyright>
+    <copyright>Copyright 2013-2021</copyright>
     <tags>etl</tags>
     <dependencies>
       <group targetFramework="net462">

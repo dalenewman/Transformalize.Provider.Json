@@ -3,7 +3,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Transformalize.Providers.Json</RootNamespace>
     <AssemblyName>Transformalize.Provider.Json</AssemblyName>
-    <Version>0.8.34-beta</Version>
+    <Version>0.8.38-beta</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />

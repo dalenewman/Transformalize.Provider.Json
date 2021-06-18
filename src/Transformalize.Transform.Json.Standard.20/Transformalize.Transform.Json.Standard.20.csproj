@@ -3,7 +3,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Transformalize.Transforms.Json</RootNamespace>
     <AssemblyName>Transformalize.Transform.Json</AssemblyName>
-    <Version>0.8.34-beta</Version>
+    <Version>0.8.38-beta</Version>
   </PropertyGroup>
   <Import Project="..\Transformalize.Transform.Json.Shared\Transformalize.Transform.Json.Shared.projitems" Label="Shared" />
   <ItemGroup>
