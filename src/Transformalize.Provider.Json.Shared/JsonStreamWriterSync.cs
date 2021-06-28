@@ -27,14 +27,14 @@ namespace Transformalize.Providers.Json {
 
    public class JsonStreamWriterSync : IWrite {
 
-      private readonly Stream _stream;
+      private readonly StreamWriter _streamWriter;
       private readonly Field[] _fields;
       private readonly string[] _formats;
       private readonly OutputContext _context;
 
-      public JsonStreamWriterSync(OutputContext context, Stream stream) {
+      public JsonStreamWriterSync(OutputContext context, StreamWriter streamWriter) {
          _context = context;
-         _stream = stream;
+         _streamWriter = streamWriter;
          _fields = context.GetAllEntityOutputFields().ToArray();
          _formats = new string[_fields.Count()];
          for (int i = 0; i < _fields.Length; i++) {
@@ -44,8 +44,7 @@ namespace Transformalize.Providers.Json {
 
       public void Write(IEnumerable<IRow> rows) {
 
-         var textWriter = new StreamWriter(_stream);
-         var jw = new JsonTextWriter(textWriter) {
+         var jw = new JsonTextWriter(_streamWriter) {
             Formatting = _context.Connection.Format == "json" ? Formatting.Indented : Formatting.None
          };
 

@@ -22,23 +22,23 @@ using Transformalize.Contracts;
 
 namespace Transformalize.Providers.Json {
 
-    public class JsonFileWriter : IWrite {
-        private readonly OutputContext _context;
-        private readonly IWrite _streamWriter;
-        private readonly MemoryStream _stream;
+   public class JsonFileWriter : IWrite {
+      private readonly OutputContext _context;
+      private readonly IWrite _jsonStreamWriter;
+      private readonly StreamWriter _streamWriter;
 
-        public JsonFileWriter(OutputContext context) {
-            _context = context;
-            _stream = new MemoryStream();
-            _streamWriter = new JsonStreamWriter2(context, _stream);
-        }
+      public JsonFileWriter(OutputContext context) {
+         _context = context;
+         _streamWriter = new StreamWriter(new MemoryStream());
+         _jsonStreamWriter = new JsonStreamWriter(context, _streamWriter);
+      }
 
-        public void Write(IEnumerable<IRow> rows) {
-            using (var fileStream = File.Create(_context.Connection.File)) {
-                _streamWriter.Write(rows);
-                _stream.Seek(0, SeekOrigin.Begin);
-                _stream.CopyTo(fileStream);
-            }
-        }
-    }
+      public void Write(IEnumerable<IRow> rows) {
+         using (var fileStream = File.Create(_context.Connection.File)) {
+            _jsonStreamWriter.Write(rows);
+            _streamWriter.BaseStream.Seek(0, SeekOrigin.Begin);
+            _streamWriter.BaseStream.CopyTo(fileStream);
+         }
+      }
+   }
 }
