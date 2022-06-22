@@ -6,7 +6,7 @@
     <Version>0.8.39-beta</Version>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Transformalize" Version="0.8.41-beta" />
   </ItemGroup>
   <Import Project="..\Transformalize.Provider.Json.Shared\Transformalize.Provider.Json.Shared.projitems" Label="Shared" />
