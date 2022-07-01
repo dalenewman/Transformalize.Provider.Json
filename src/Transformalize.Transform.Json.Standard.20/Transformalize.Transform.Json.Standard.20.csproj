@@ -3,11 +3,13 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Transformalize.Transforms.Json</RootNamespace>
     <AssemblyName>Transformalize.Transform.Json</AssemblyName>
-    <Version>0.8.39-beta</Version>
+    <Version>0.10.0-beta</Version>
+    <FileVersion>0.10.0</FileVersion>
+    <AssemblyVersion>0.10.0</AssemblyVersion>
   </PropertyGroup>
   <Import Project="..\Transformalize.Transform.Json.Shared\Transformalize.Transform.Json.Shared.projitems" Label="Shared" />
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="Transformalize" Version="0.8.41-beta" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Transformalize" Version="0.10.0-beta" />
   </ItemGroup>
 </Project>
