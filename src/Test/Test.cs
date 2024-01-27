@@ -11,7 +11,7 @@ namespace Test.Unit {
    [TestClass]
    public class Test {
       [TestMethod]
-      public void TestMethod1() {
+      public void JsonPathCombo() {
          var cfg = @"<cfg name='test'>
    <entities>
       <add name='entity'>
@@ -55,5 +55,52 @@ namespace Test.Unit {
             }
          }
       }
+
+      // todo: handle malformed json
+
+      [TestMethod]
+      public void JsonPathMissingProperty() {
+         var cfg = @"<cfg name='test'>
+   <entities>
+      <add name='entity'>
+         <rows>
+            <add key='1' json='{ ""color"": ""red"" }' />
+            <add key='2' json='{ ""age"": 1 }' />
+         </rows>
+         <fields>
+            <add name='key' type='int' primary-key='true' />
+            <add name='json' length='max' />
+         </fields>
+         <calculated-fields>
+            <add name='color' t='copy(json).jsonpath($.color)' />
+            <add name='age' type='int' t='copy(json).jsonpath($.age)' />
+         </calculated-fields>
+      </add>
+   </entities>
+</cfg>";
+         var logger = new ConsoleLogger(LogLevel.Debug);
+         using (var outer = new ConfigurationContainer(new JsonTransformModule()).CreateScope(cfg, logger)) {
+            var process = outer.Resolve<Process>();
+            using (var inner = new Container(new JsonTransformModule()).CreateScope(process, logger)) {
+               var controller = inner.Resolve<IProcessController>();
+               IRow[] output = controller.Read().ToArray();
+
+               Assert.AreEqual(2, output.Length);
+
+               var red = output[0][process.Entities[0].CalculatedFields[0]];
+               var blank = output[1][process.Entities[0].CalculatedFields[0]];
+               Assert.AreEqual("red", red, "First record color should be red.");
+               Assert.AreEqual("", blank, "Second record color value should be default (empty string).");
+
+               var zero = output[0][process.Entities[0].CalculatedFields[1]];
+               var one = output[1][process.Entities[0].CalculatedFields[1]];
+               Assert.AreEqual(0, zero, "First record age should use default (0).");
+               Assert.AreEqual(1, one, "Second record age should be 1.");
+            }
+         }
+      }
+
    }
+
+
 }

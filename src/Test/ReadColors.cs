@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Linq;
 using Autofac;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Transformalize.Configuration;
 using Transformalize.Containers.Autofac;
 using Transformalize.Contracts;
-using Transformalize.Providers.Bogus.Autofac;
 using Transformalize.Providers.Console;
 using Transformalize.Providers.Json.Autofac;
 

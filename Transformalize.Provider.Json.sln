@@ -1,12 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29001.49
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Provider.Json", "src\Transformalize.Provider.Json\Transformalize.Provider.Json.csproj", "{09508A42-8F76-4AAB-84CA-CCD8653CEB96}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Provider.Json.Autofac", "src\Transformalize.Provider.Json.Autofac\Transformalize.Provider.Json.Autofac.csproj", "{5251FE45-E09A-4996-BE2A-67EA98FAFF61}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{85FA0C69-A760-4DA4-BBDA-405440FAFD78}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
@@ -17,130 +13,53 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{A0465D20
 		nuget\myget.bat = nuget\myget.bat
 		nuget\nuget.bat = nuget\nuget.bat
 		nuget\Transformalize.Provider.Json.Autofac.nuspec = nuget\Transformalize.Provider.Json.Autofac.nuspec
-		nuget\Transformalize.Provider.Json.Autofac.v3.nuspec = nuget\Transformalize.Provider.Json.Autofac.v3.nuspec
 		nuget\Transformalize.Provider.Json.nuspec = nuget\Transformalize.Provider.Json.nuspec
 		nuget\Transformalize.Transform.Json.Autofac.nuspec = nuget\Transformalize.Transform.Json.Autofac.nuspec
 		nuget\Transformalize.Transform.Json.nuspec = nuget\Transformalize.Transform.Json.nuspec
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Provider.Json.Autofac.v3", "src\Transformalize.Provider.Json.Autofac.v3\Transformalize.Provider.Json.Autofac.v3.csproj", "{88900CE6-C904-40FF-ADD4-E60A014EF1AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "src\Test\Test.csproj", "{899B7DCC-C685-4CBA-9D11-E6A2BF548CCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Integration", "src\Test.Integration\Test.Integration.csproj", "{2E887005-5015-4A5A-91CF-0DADD1E834EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transformalize.Provider.Json", "src\Transformalize.Provider.Json\Transformalize.Provider.Json.csproj", "{9C3E1AD2-CBFB-4D77-9FA7-F687F2317C87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Transform.Json", "src\Transformalize.Transform.Json\Transformalize.Transform.Json.csproj", "{B69582CE-1251-4F9E-8AE3-9B4525A77C71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transformalize.Provider.Json.Autofac", "src\Transformalize.Provider.Json.Autofac\Transformalize.Provider.Json.Autofac.csproj", "{D095F2CB-93AC-40F0-A682-4F51EEE041AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Unit", "src\Test.Unit\Test.Unit.csproj", "{1846FBC0-024E-4AEA-BDC7-8B58D4AADDE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transformalize.Transform.Json", "src\Transformalize.Transform.Json\Transformalize.Transform.Json.csproj", "{7230FF60-5238-447F-A1C6-FC144585DEAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Transform.Json.Autofac", "src\Transformalize.Transform.Json.Autofac\Transformalize.Transform.Json.Autofac.csproj", "{17C8302F-74DE-4C70-98D9-BB4659029022}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Provider", "Provider", "{0198EF22-BD4F-4A3D-89A0-93C36511E44D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Provider.Autofac", "Provider.Autofac", "{19C3A23E-38B5-48F0-810C-DD650A117D84}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Transformalize.Provider.Json.Autofac.Shared", "src\Transformalize.Provider.Json.Autofac.Shared\Transformalize.Provider.Json.Autofac.Shared.shproj", "{0D3D6287-432A-4A83-A197-62B8521B70FE}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Transform", "Transform", "{7E70E09D-E805-4A2B-926D-F803EDBBB09B}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Transformalize.Provider.Json.Shared", "src\Transformalize.Provider.Json.Shared\Transformalize.Provider.Json.Shared.shproj", "{0B844803-702A-41C9-823A-AEB895845DA1}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transformalize.Provider.Json.Standard.20", "src\Transformalize.Provider.Json.Standard.20\Transformalize.Provider.Json.Standard.20.csproj", "{85072274-3B3C-4357-B1BD-3A4D3E3616C4}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transformalize.Provider.Json.Autofac.Standard.20", "src\Transformalize.Provider.Json.Autofac.Standard.20\Transformalize.Provider.Json.Autofac.Standard.20.csproj", "{629D7BAF-F5D0-46C7-8BD6-878A825F3852}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Transform.Autofac", "Transform.Autofac", "{DBF6AFED-30DA-459A-8BAD-6884490F7383}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Transformalize.Transform.Json.Shared", "src\Transformalize.Transform.Json.Shared\Transformalize.Transform.Json.Shared.shproj", "{8CA4EE65-1D7B-470A-A2BC-E56930EA319A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transformalize.Transform.Json.Standard.20", "src\Transformalize.Transform.Json.Standard.20\Transformalize.Transform.Json.Standard.20.csproj", "{731088BA-4A20-4D7F-823C-20DE89811AEC}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Transformalize.Transform.Json.Autofac.Shared", "src\Transformalize.Transform.Json.Autofac.Shared\Transformalize.Transform.Json.Autofac.Shared.shproj", "{645230EF-63AB-4A09-A493-CF3707F944E6}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transformalize.Transform.Json.Autofac.Standard.20", "src\Transformalize.Transform.Json.Autofac.Standard.20\Transformalize.Transform.Json.Autofac.Standard.20.csproj", "{F92EEAD8-9AFA-4DCA-A676-EDDE44197663}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transformalize.Transform.Json.Autofac", "src\Transformalize.Transform.Json.Autofac\Transformalize.Transform.Json.Autofac.csproj", "{1BF8E254-2BB9-42A9-8039-6E1F4787A397}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		src\Transformalize.Provider.Json.Shared\Transformalize.Provider.Json.Shared.projitems*{09508a42-8f76-4aab-84ca-ccd8653ceb96}*SharedItemsImports = 4
-		src\Transformalize.Provider.Json.Shared\Transformalize.Provider.Json.Shared.projitems*{0b844803-702a-41c9-823a-aeb895845da1}*SharedItemsImports = 13
-		src\Transformalize.Provider.Json.Autofac.Shared\Transformalize.Provider.Json.Autofac.Shared.projitems*{0d3d6287-432a-4a83-a197-62b8521b70fe}*SharedItemsImports = 13
-		src\Transformalize.Transform.Json.Autofac.Shared\Transformalize.Transform.Json.Autofac.Shared.projitems*{17c8302f-74de-4c70-98d9-bb4659029022}*SharedItemsImports = 4
-		src\Transformalize.Provider.Json.Autofac.Shared\Transformalize.Provider.Json.Autofac.Shared.projitems*{5251fe45-e09a-4996-be2a-67ea98faff61}*SharedItemsImports = 4
-		src\Transformalize.Provider.Json.Autofac.Shared\Transformalize.Provider.Json.Autofac.Shared.projitems*{629d7baf-f5d0-46c7-8bd6-878a825f3852}*SharedItemsImports = 5
-		src\Transformalize.Transform.Json.Autofac.Shared\Transformalize.Transform.Json.Autofac.Shared.projitems*{645230ef-63ab-4a09-a493-cf3707f944e6}*SharedItemsImports = 13
-		src\Transformalize.Transform.Json.Shared\Transformalize.Transform.Json.Shared.projitems*{731088ba-4a20-4d7f-823c-20de89811aec}*SharedItemsImports = 5
-		src\Transformalize.Provider.Json.Shared\Transformalize.Provider.Json.Shared.projitems*{85072274-3b3c-4357-b1bd-3a4d3e3616c4}*SharedItemsImports = 5
-		src\Transformalize.Provider.Json.Autofac.Shared\Transformalize.Provider.Json.Autofac.Shared.projitems*{88900ce6-c904-40ff-add4-e60a014ef1ac}*SharedItemsImports = 4
-		src\Transformalize.Transform.Json.Shared\Transformalize.Transform.Json.Shared.projitems*{8ca4ee65-1d7b-470a-a2bc-e56930ea319a}*SharedItemsImports = 13
-		src\Transformalize.Transform.Json.Shared\Transformalize.Transform.Json.Shared.projitems*{b69582ce-1251-4f9e-8ae3-9b4525a77c71}*SharedItemsImports = 4
-		src\Transformalize.Transform.Json.Autofac.Shared\Transformalize.Transform.Json.Autofac.Shared.projitems*{f92eead8-9afa-4dca-a676-edde44197663}*SharedItemsImports = 5
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{09508A42-8F76-4AAB-84CA-CCD8653CEB96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09508A42-8F76-4AAB-84CA-CCD8653CEB96}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09508A42-8F76-4AAB-84CA-CCD8653CEB96}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09508A42-8F76-4AAB-84CA-CCD8653CEB96}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5251FE45-E09A-4996-BE2A-67EA98FAFF61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5251FE45-E09A-4996-BE2A-67EA98FAFF61}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5251FE45-E09A-4996-BE2A-67EA98FAFF61}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5251FE45-E09A-4996-BE2A-67EA98FAFF61}.Release|Any CPU.Build.0 = Release|Any CPU
-		{88900CE6-C904-40FF-ADD4-E60A014EF1AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{88900CE6-C904-40FF-ADD4-E60A014EF1AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{88900CE6-C904-40FF-ADD4-E60A014EF1AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{88900CE6-C904-40FF-ADD4-E60A014EF1AC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2E887005-5015-4A5A-91CF-0DADD1E834EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2E887005-5015-4A5A-91CF-0DADD1E834EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2E887005-5015-4A5A-91CF-0DADD1E834EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2E887005-5015-4A5A-91CF-0DADD1E834EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B69582CE-1251-4F9E-8AE3-9B4525A77C71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B69582CE-1251-4F9E-8AE3-9B4525A77C71}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B69582CE-1251-4F9E-8AE3-9B4525A77C71}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B69582CE-1251-4F9E-8AE3-9B4525A77C71}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1846FBC0-024E-4AEA-BDC7-8B58D4AADDE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1846FBC0-024E-4AEA-BDC7-8B58D4AADDE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1846FBC0-024E-4AEA-BDC7-8B58D4AADDE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1846FBC0-024E-4AEA-BDC7-8B58D4AADDE9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{17C8302F-74DE-4C70-98D9-BB4659029022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{17C8302F-74DE-4C70-98D9-BB4659029022}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{17C8302F-74DE-4C70-98D9-BB4659029022}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{17C8302F-74DE-4C70-98D9-BB4659029022}.Release|Any CPU.Build.0 = Release|Any CPU
-		{85072274-3B3C-4357-B1BD-3A4D3E3616C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{85072274-3B3C-4357-B1BD-3A4D3E3616C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{85072274-3B3C-4357-B1BD-3A4D3E3616C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{85072274-3B3C-4357-B1BD-3A4D3E3616C4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{629D7BAF-F5D0-46C7-8BD6-878A825F3852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{629D7BAF-F5D0-46C7-8BD6-878A825F3852}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{629D7BAF-F5D0-46C7-8BD6-878A825F3852}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{629D7BAF-F5D0-46C7-8BD6-878A825F3852}.Release|Any CPU.Build.0 = Release|Any CPU
-		{731088BA-4A20-4D7F-823C-20DE89811AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{731088BA-4A20-4D7F-823C-20DE89811AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{731088BA-4A20-4D7F-823C-20DE89811AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{731088BA-4A20-4D7F-823C-20DE89811AEC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F92EEAD8-9AFA-4DCA-A676-EDDE44197663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F92EEAD8-9AFA-4DCA-A676-EDDE44197663}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F92EEAD8-9AFA-4DCA-A676-EDDE44197663}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F92EEAD8-9AFA-4DCA-A676-EDDE44197663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{899B7DCC-C685-4CBA-9D11-E6A2BF548CCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{899B7DCC-C685-4CBA-9D11-E6A2BF548CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{899B7DCC-C685-4CBA-9D11-E6A2BF548CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{899B7DCC-C685-4CBA-9D11-E6A2BF548CCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C3E1AD2-CBFB-4D77-9FA7-F687F2317C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C3E1AD2-CBFB-4D77-9FA7-F687F2317C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C3E1AD2-CBFB-4D77-9FA7-F687F2317C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C3E1AD2-CBFB-4D77-9FA7-F687F2317C87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D095F2CB-93AC-40F0-A682-4F51EEE041AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D095F2CB-93AC-40F0-A682-4F51EEE041AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D095F2CB-93AC-40F0-A682-4F51EEE041AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D095F2CB-93AC-40F0-A682-4F51EEE041AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7230FF60-5238-447F-A1C6-FC144585DEAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7230FF60-5238-447F-A1C6-FC144585DEAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7230FF60-5238-447F-A1C6-FC144585DEAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7230FF60-5238-447F-A1C6-FC144585DEAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BF8E254-2BB9-42A9-8039-6E1F4787A397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BF8E254-2BB9-42A9-8039-6E1F4787A397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BF8E254-2BB9-42A9-8039-6E1F4787A397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BF8E254-2BB9-42A9-8039-6E1F4787A397}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{09508A42-8F76-4AAB-84CA-CCD8653CEB96} = {0198EF22-BD4F-4A3D-89A0-93C36511E44D}
-		{5251FE45-E09A-4996-BE2A-67EA98FAFF61} = {19C3A23E-38B5-48F0-810C-DD650A117D84}
 		{A0465D20-7758-413F-A911-585923A61160} = {85FA0C69-A760-4DA4-BBDA-405440FAFD78}
-		{88900CE6-C904-40FF-ADD4-E60A014EF1AC} = {19C3A23E-38B5-48F0-810C-DD650A117D84}
-		{B69582CE-1251-4F9E-8AE3-9B4525A77C71} = {7E70E09D-E805-4A2B-926D-F803EDBBB09B}
-		{17C8302F-74DE-4C70-98D9-BB4659029022} = {DBF6AFED-30DA-459A-8BAD-6884490F7383}
-		{0D3D6287-432A-4A83-A197-62B8521B70FE} = {19C3A23E-38B5-48F0-810C-DD650A117D84}
-		{0B844803-702A-41C9-823A-AEB895845DA1} = {0198EF22-BD4F-4A3D-89A0-93C36511E44D}
-		{85072274-3B3C-4357-B1BD-3A4D3E3616C4} = {0198EF22-BD4F-4A3D-89A0-93C36511E44D}
-		{629D7BAF-F5D0-46C7-8BD6-878A825F3852} = {19C3A23E-38B5-48F0-810C-DD650A117D84}
-		{8CA4EE65-1D7B-470A-A2BC-E56930EA319A} = {7E70E09D-E805-4A2B-926D-F803EDBBB09B}
-		{731088BA-4A20-4D7F-823C-20DE89811AEC} = {7E70E09D-E805-4A2B-926D-F803EDBBB09B}
-		{645230EF-63AB-4A09-A493-CF3707F944E6} = {DBF6AFED-30DA-459A-8BAD-6884490F7383}
-		{F92EEAD8-9AFA-4DCA-A676-EDDE44197663} = {DBF6AFED-30DA-459A-8BAD-6884490F7383}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {178081F6-A699-4B47-9630-78730739C957}

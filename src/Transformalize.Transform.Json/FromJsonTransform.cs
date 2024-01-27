@@ -114,7 +114,6 @@ namespace Transformalize.Transforms.Json {
             }
          }
 
-
          return row;
 
       }

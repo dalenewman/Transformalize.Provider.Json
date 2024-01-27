@@ -39,7 +39,11 @@ namespace Transformalize.Providers.Json.Autofac {
             _builder.Register<IRead>(ctx => {
                var input = ctx.ResolveNamed<InputContext>(entity.Key);
                var rowFactory = ctx.ResolveNamed<IRowFactory>(entity.Key, new NamedParameter("capacity", input.RowCapacity));
-               return new JsonFileReader(input, rowFactory);
+               if (Path.GetExtension(input.Connection.File).ToLower() == ".jsonl") {
+                  return new JsonLinesFileReader(input, rowFactory);
+               } else {
+                  return new JsonFileReader(input, rowFactory);
+               }
             }).Named<IRead>(entity.Key);
 
          }
@@ -50,15 +54,24 @@ namespace Transformalize.Providers.Json.Autofac {
 
                // ENTITY WRITER
                _builder.Register<IWrite>(ctx => {
+                  bool jsonLines = Path.GetExtension(_process.GetOutputConnection().File).ToLower() == ".jsonl";
                   var output = ctx.ResolveNamed<OutputContext>(entity.Key);
                   if (output.Connection.Stream && _streamWriter != null) {
                      if (UseAsyncMethods) {  // orchard core (asp.net core) requires all output stream operations to be async
                         return new JsonStreamWriter(output, _streamWriter);
                      } else {
-                        return new JsonStreamWriterSync(output, _streamWriter); // to avoid: The stream is currently in use by a previous operation on the stream
+                        if(jsonLines) {
+                           return new JsonLinesStreamWriterSync(output, _streamWriter); // to avoid: The stream is currently in use by a previous operation on the stream
+                        } else {
+                           return new JsonStreamWriterSync(output, _streamWriter); // to avoid: The stream is currently in use by a previous operation on the stream
+                        }
                      }
                   } else {
-                     return new JsonFileWriter(output);
+                     if (jsonLines) {
+                        return new JsonLinesFileWriter(output);
+                     } else {
+                        return new JsonFileWriter(output);
+                     }
                   }
 
                }).Named<IWrite>(entity.Key);

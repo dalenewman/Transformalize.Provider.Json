@@ -37,16 +37,16 @@ namespace Transformalize.Transforms.Json {
                if (find.Message == "Path returned multiple tokens.") {
                   row[Context.Field] = o.SelectTokens(Context.Operation.Expression).First().ToString();
                } else {
-                  Context.Error(find.Message);
-                  Context.Error("No result with JSON expression: {0}", Context.Operation.Expression);
+                  Context.Warn(find.Message);
+                  Context.Warn("No result with JSON expression: {0}", Context.Operation.Expression);
                   Context.Debug(() => json);
                   Context.Debug(() => find.StackTrace);
                   row[Context.Field] = Context.Field.DefaultValue();
                }
             }
          } catch (JsonReaderException parse) {
-            Context.Error("Could not parse JSON in {0}", _input.Alias);
-            Context.Error(parse.Message);
+            Context.Warn("Could not parse JSON in {0}", _input.Alias);
+            Context.Warn(parse.Message);
             Context.Debug(() => json);
             Context.Debug(() => parse.StackTrace);
             row[Context.Field] = Context.Field.DefaultValue();
