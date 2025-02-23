@@ -2,7 +2,7 @@
 <package>
    <metadata>
       <id>Transformalize.Provider.Json</id>
-      <version>0.10.1-beta</version>
+      <version>0.11.1-beta</version>
       <title>JSON Provider for Transformalize</title>
       <authors>Dale Newman</authors>
       <owners>Dale Newman</owners>
@@ -10,12 +10,12 @@
       <license type="expression">Apache-2.0</license>
       <requireLicenseAcceptance>false</requireLicenseAcceptance>
       <description>JSON Provider for Transformalize</description>
-      <releaseNotes>update dependencies, consolidate to net standard 2</releaseNotes>
-      <copyright>Copyright 2013-2024</copyright>
+      <releaseNotes>update dependencies</releaseNotes>
+      <copyright>Copyright 2013-2022</copyright>
       <tags>etl,transformalize,json</tags>
       <dependencies>
          <group targetFramework="netstandard2.0">
-            <dependency id="Transformalize" version="0.10.12-beta" />
+            <dependency id="Transformalize" version="0.11.1-beta" />
             <dependency id="Newtonsoft.Json" version="13.0.3" />
          </group>
       </dependencies>

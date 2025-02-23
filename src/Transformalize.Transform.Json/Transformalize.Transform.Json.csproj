@@ -3,12 +3,12 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Transformalize.Transforms.Json</RootNamespace>
     <AssemblyName>Transformalize.Transform.Json</AssemblyName>
-    <Version>0.10.1-beta</Version>
-    <FileVersion>0.10.1</FileVersion>
-    <AssemblyVersion>0.10.1</AssemblyVersion>
+    <Version>0.11.1-beta</Version>
+    <FileVersion>0.11.1</FileVersion>
+    <AssemblyVersion>0.11.1</AssemblyVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="Transformalize" Version="0.10.12-beta" />
+    <PackageReference Include="Transformalize" Version="0.11.1-beta" />
   </ItemGroup>
 </Project>
