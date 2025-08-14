@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using Autofac;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Autofac;
 using Transformalize.Configuration;
 using Transformalize.Containers.Autofac;
 using Transformalize.Contracts;
@@ -10,6 +8,7 @@ using Transformalize.Transforms.Json.Autofac;
 namespace Test.Unit {
    [TestClass]
    public class Test {
+
       [TestMethod]
       public void JsonPathCombo() {
          var cfg = @"<cfg name='test'>
@@ -34,9 +33,9 @@ namespace Test.Unit {
    </entities>
 </cfg>";
          var logger = new ConsoleLogger(LogLevel.Debug);
-         using(var outer = new ConfigurationContainer(new JsonTransformModule()).CreateScope(cfg, logger)) {
+         using (var outer = new ConfigurationContainer(new JsonTransformModule()).CreateScope(cfg, logger)) {
             var process = outer.Resolve<Process>();
-            using(var inner = new Container(new JsonTransformModule()).CreateScope(process, logger)) {
+            using (var inner = new Container(new JsonTransformModule()).CreateScope(process, logger)) {
                var controller = inner.Resolve<IProcessController>();
                IRow[] output = controller.Read().ToArray();
 
@@ -100,7 +99,82 @@ namespace Test.Unit {
          }
       }
 
+      [TestMethod]
+      public void ToJson() {
+         var cfg = @"<cfg name='test'>
+   <entities>
+      <add name='entity'>
+         <rows>
+            <add num='1' company='Nvidia' ceo='Jensen Huang' />
+            <add num='2' company='Microsoft' ceo='Satya Nadella' />
+            <add num='3' company='Apple' ceo='Tim Cook' />
+         </rows>
+         <fields>
+            <add name='num' type='int' primary-key='true' />
+            <add name='company' />
+            <add name='ceo' />
+         </fields>
+         <calculated-fields>
+            <add name='json' t='copy(*).tojson()' />
+         </calculated-fields>
+      </add>
+   </entities>
+</cfg>";
+         var logger = new ConsoleLogger(LogLevel.Debug);
+         using (var outer = new ConfigurationContainer(new JsonTransformModule()).CreateScope(cfg, logger)) {
+            var process = outer.Resolve<Process>();
+            using (var inner = new Container(new JsonTransformModule()).CreateScope(process, logger)) {
+               var controller = inner.Resolve<IProcessController>();
+               IRow[] output = controller.Read().ToArray();
+
+               Assert.AreEqual(3, output.Length);
+               var field = process.Entities[0].CalculatedFields[0];
+               var value = output[0][field];
+
+               Assert.AreEqual("{\"num\":1,\"company\":\"Nvidia\",\"ceo\":\"Jensen Huang\"}", value);
+            }
+         }
+      }
+
+
+      [TestMethod]
+      public void ToJsonIndented() {
+         var cfg = @"<cfg name='test'>
+   <entities>
+      <add name='entity'>
+         <rows>
+            <add num='1' company='Nvidia' ceo='Jensen Huang' />
+            <add num='2' company='Microsoft' ceo='Satya Nadella' />
+            <add num='3' company='Apple' ceo='Tim Cook' />
+         </rows>
+         <fields>
+            <add name='num' type='int' primary-key='true' />
+            <add name='company' />
+            <add name='ceo' />
+         </fields>
+         <calculated-fields>
+            <add name='json' t='copy(num,company).tojson(indented)' />
+         </calculated-fields>
+      </add>
+   </entities>
+</cfg>";
+         var logger = new ConsoleLogger(LogLevel.Debug);
+         using (var outer = new ConfigurationContainer(new JsonTransformModule()).CreateScope(cfg, logger)) {
+            var process = outer.Resolve<Process>();
+            using (var inner = new Container(new JsonTransformModule()).CreateScope(process, logger)) {
+               var controller = inner.Resolve<IProcessController>();
+               IRow[] output = controller.Read().ToArray();
+
+               Assert.AreEqual(3, output.Length);
+               var field = process.Entities[0].CalculatedFields[0];
+               var value = output[0][field];
+
+               Assert.AreEqual(@"{
+  ""num"": 1,
+  ""company"": ""Nvidia""
+}", value);
+            }
+         }
+      }
    }
-
-
 }

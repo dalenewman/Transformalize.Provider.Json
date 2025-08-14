@@ -18,6 +18,7 @@ namespace Transformalize.Transforms.Json.Autofac {
 
          RegisterTransform(builder, c => new JsonPathTransform(c), new JsonPathTransform().GetSignatures());
          RegisterTransform(builder, c => new FromJsonTransform(c, o => JsonConvert.SerializeObject(o, Formatting.None)), new FromJsonTransform().GetSignatures());
+         RegisterTransform(builder, c => new ToJsonTransform(c), new ToJsonTransform().GetSignatures());
 
       }
 
